@@ -9,7 +9,7 @@ public class HelloWorld {
             config.bundledPlugins.enableDevLogging();
         });
         // Описываем, что загрузится по адресу /
-        app.get("/hello", ctx -> {
+        app.get("/", ctx -> {
             String name = ctx.queryParamAsClass("name", String.class)
                     .getOrDefault("World");
             ctx.result("Hello, " + name + "!");
